@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Movie Website</title>
+</head>
+<body>
+
+    <!-- Buttons at the top -->
+    <button onclick="showSection('catalog')">Catalog</button>
+    <button onclick="showSection('search')">Search</button>
+    <button onclick="showSection('about')">About</button>
+
+    <hr>
+
+    <!-- Catalog Section -->
+    <div id="catalog">
+        <h1>Popular Movies</h1>
+        <p><b>Inception</b> – A mind-bending movie about dreams inside dreams.</p>
+        <p><b>Avatar</b> – Humans explore a blue alien world called Pandora.</p>
+        <p><b>The Lion King</b> – A lion named Simba becomes king.</p>
+        <p><b>Star Wars</b> – Epic space battles with Jedi and Sith.</p>
+        <p><b>The Avengers</b> – Superheroes team up to save the world.</p>
+    </div>
+
+    <!-- Search Section (Hidden by default) -->
+    <div id="search" style="display:none;">
+        <h1>Search Movies</h1>
+        <input type="text" placeholder="Type a movie name">
+        <p>Totally a search bar</p>
+    </div>
+
+    <!-- About Section (Hidden by default) -->
+    <div id="about" style="display:none;">
+        <h1>About This Site</h1>
+        <p>This is a very simple website about movies that I made from a youtube tutorial yesterday.</p>
+        <p>It was made by Munkhsuld from 10a</p>
+    </div>
+
+    <script>
+        function showSection(name) {
+            document.getElementById('catalog').style.display = 'none';
+            document.getElementById('search').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+
+            document.getElementById(name).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
